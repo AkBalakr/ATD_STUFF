@@ -48,7 +48,7 @@ public class screen2 extends AppCompatActivity {
         // int size = adapter.getCount();
 
         for(int i = 0; i < MainActivity.myArray.size(); i ++){
-            adapter.add(MainActivity.myArray.get(i) + ":"+ "definition");
+            adapter.add(MainActivity.myArray.get(i) + " "+ "Link to Definition:www.dictionary.com/browse/" + MainActivity.myArray.get(i));
         }
     }
 
