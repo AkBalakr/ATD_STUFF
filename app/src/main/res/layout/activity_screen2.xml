@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.tinohacks.audiotextdefinition.screen2">
 
-</android.support.constraint.ConstraintLayout>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="8dp"
+    tools:layout_editor_absoluteX="8dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ListView
+            android:id="@+id/Speech"
+            android:layout_width="350dp"
+            android:layout_height="225dp"
+            android:background="@android:color/background_light"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp" />
+
+        <ListView
+            android:layout_width="350dp"
+            android:layout_height="225dp"
+            android:background="@android:color/background_light"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="17dp"
+            tools:layout_editor_absoluteY="261dp"
+            android:id="@+id/listView"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/Speech"
+            android:layout_alignStart="@+id/Speech" />
+
+</RelativeLayout>
+
