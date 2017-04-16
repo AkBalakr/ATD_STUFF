@@ -46,12 +46,15 @@ public class screen2 extends AppCompatActivity {
         final ListView listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(adapter);
 
+        final TextView textView = (TextView) findViewById(R.id.viewText);
+        textView.setText(MainActivity.fullText);
+
         final ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                ClipData clip = ClipData.newPlainText(((TextView)view).getText().toString(), ((TextView)view).getText().toString());
+                ClipData clip = ClipData.newPlainText("www.dictionary.com/browse/" + ((TextView)view).getText().toString(), "www.dictionary.com/browse/" + ((TextView)view).getText().toString());
                 clipboard.setPrimaryClip(clip);
             }
         });
@@ -62,7 +65,7 @@ public class screen2 extends AppCompatActivity {
         // int size = adapter.getCount();
 
         for(int i = 0; i < MainActivity.myArray.size(); i ++){
-            adapter.add(MainActivity.myArray.get(i) + " "+ "Link to Definition:www.dictionary.com/browse/" + MainActivity.myArray.get(i));
+            adapter.add(MainActivity.myArray.get(i));
         }
     }
 

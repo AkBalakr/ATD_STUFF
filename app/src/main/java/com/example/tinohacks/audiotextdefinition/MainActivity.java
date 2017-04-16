@@ -16,6 +16,7 @@ import java.util.StringTokenizer;
 
 public class MainActivity extends AppCompatActivity {
     public static ArrayList<String> myArray = new ArrayList<String>();
+    public static String fullText;
     private final int SPEECH_RECOGNITION_CODE = 1;
     private TextView txtOutput;
     Button record;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     ArrayList<String> result = data
                             .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     String text = result.get(0);
+                    fullText = text;
 
                     StringTokenizer st = new StringTokenizer(text);
 
