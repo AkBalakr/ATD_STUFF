@@ -16,7 +16,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="72dp"
-        android:text="Record" />
+        android:textView="Record" />
 
     <EditText
         android:id="@+id/editText2"
@@ -28,7 +28,7 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        android:text="Welcome!"
+        android:textView="Welcome!"
         android:textColor="@android:color/background_light"
         android:textSize="30sp" />
 
@@ -41,7 +41,7 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        android:text="Click button below to record"
+        android:textView="Click button below to record"
         android:textColor="@android:color/background_light"
         android:id="@+id/editText4" />
 
@@ -52,7 +52,7 @@
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="and translate your audio"
+        android:textView="and translate your audio"
         android:textColor="@android:color/background_light"
         android:gravity="center"/>
 
