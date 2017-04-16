@@ -13,7 +13,7 @@
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:srcCompat="@drawable/LOGOTHING"
+        app:srcCompat="@drawable/logo"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/rec"
         android:layout_toEndOf="@+id/rec"
