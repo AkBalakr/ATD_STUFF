@@ -1,6 +1,9 @@
 package com.example.tinohacks.audiotextdefinition;
 
 import android.content.ActivityNotFoundException;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +20,7 @@ import android.app.ListActivity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,8 +43,18 @@ public class screen2 extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(screen2.this, android.R.layout.simple_list_item_1);
 
 //      adapter.add(word + ":" + def);
-        ListView listView = (ListView) findViewById(R.id.listView);
+        final ListView listView = (ListView) findViewById(R.id.listView);
+        listView.setAdapter(adapter);
 
+        final ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                ClipData clip = ClipData.newPlainText(((TextView)view).getText().toString(), ((TextView)view).getText().toString());
+                clipboard.setPrimaryClip(clip);
+            }
+        });
 
 
 //        ListView Speech = (ListView) findViewById(R.id.listView);

@@ -3,8 +3,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="368dp"
-    android:layout_height="495dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@android:color/black"
     tools:layout_editor_absoluteX="8dp"
     tools:layout_editor_absoluteY="8dp">
@@ -13,12 +13,13 @@
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
         app:srcCompat="@drawable/logo"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/rec"
         android:layout_toEndOf="@+id/rec"
-        android:layout_marginLeft="18dp"
-        android:layout_marginStart="18dp" />
+        android:layout_marginTop="16dp" />
 
     <Button
         android:id="@+id/rec"
@@ -34,17 +35,18 @@
         android:id="@+id/editText2"
         android:layout_width="225dp"
         android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
         android:text="Welcome!"
         android:textColor="@android:color/background_light"
-        android:textSize="30sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:textSize="30sp" />
 
     <TextView
+        android:id="@+id/editText4"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_below="@+id/editText2"
@@ -53,18 +55,17 @@
         android:ems="10"
         android:gravity="center"
         android:text="Click button below to record"
-        android:textColor="@android:color/background_light"
-        android:id="@+id/editText4" />
+        android:textColor="@android:color/background_light" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText4"
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:gravity="center"
-        android:textColor="@android:color/background_light"
         android:text="to translate your audio"
-        android:id="@+id/textView2" />
+        android:textColor="@android:color/background_light" />
 
 </RelativeLayout>
